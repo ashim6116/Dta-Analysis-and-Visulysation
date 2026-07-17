@@ -1,0 +1,15 @@
+{
+  "type": "FeatureCollection",
+  "name": "shoreline_transects_schematic",
+  "note": "Placeholder transect points shaped like real DSAS output — replace with actual transect statistics.",
+  "features": [
+    { "type": "Feature", "properties": { "id": "T-01", "sector": "Northern Sector", "rate_m_per_yr": -2.1, "trend": "erosion" }, "geometry": { "type": "Point", "coordinates": [85.34, 19.87] } },
+    { "type": "Feature", "properties": { "id": "T-02", "sector": "Northern Sector", "rate_m_per_yr": -1.4, "trend": "erosion" }, "geometry": { "type": "Point", "coordinates": [85.40, 19.83] } },
+    { "type": "Feature", "properties": { "id": "T-03", "sector": "Outer Channel", "rate_m_per_yr": 3.6, "trend": "accretion" }, "geometry": { "type": "Point", "coordinates": [85.49, 19.77] } },
+    { "type": "Feature", "properties": { "id": "T-04", "sector": "Outer Channel", "rate_m_per_yr": 4.2, "trend": "accretion" }, "geometry": { "type": "Point", "coordinates": [85.52, 19.70] } },
+    { "type": "Feature", "properties": { "id": "T-05", "sector": "Central Sector", "rate_m_per_yr": -0.6, "trend": "erosion" }, "geometry": { "type": "Point", "coordinates": [85.45, 19.63] } },
+    { "type": "Feature", "properties": { "id": "T-06", "sector": "Southern Sector", "rate_m_per_yr": -3.3, "trend": "erosion" }, "geometry": { "type": "Point", "coordinates": [85.35, 19.55] } },
+    { "type": "Feature", "properties": { "id": "T-07", "sector": "Southern Sector", "rate_m_per_yr": -2.8, "trend": "erosion" }, "geometry": { "type": "Point", "coordinates": [85.24, 19.54] } },
+    { "type": "Feature", "properties": { "id": "T-08", "sector": "Western Sector", "rate_m_per_yr": 1.1, "trend": "accretion" }, "geometry": { "type": "Point", "coordinates": [85.16, 19.65] } }
+  ]
+}
