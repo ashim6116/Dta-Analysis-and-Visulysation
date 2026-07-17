@@ -1,4 +1,4 @@
-import { MapContainer, TileLayer, GeoJSON, CircleMarker, Tooltip } from "react-leaflet";
+import { MapContainer, TileLayer, GeoJSON, CircleMarker, Tooltip, ScaleControl, useMapEvents } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 
 const TREND_COLOR = {
@@ -13,7 +13,16 @@ const boundaryStyle = {
   fillOpacity: 0.08,
 };
 
-export default function MapView({ boundary, transects, showTransects, selectedId, onSelectTransect }) {
+function CoordsTracker({ onMove }) {
+  useMapEvents({
+    mousemove(e) {
+      onMove?.(e.latlng);
+    },
+  });
+  return null;
+}
+
+export default function MapView({ boundary, transects, showTransects, selectedId, onSelectTransect, onCoordsChange }) {
   const center = [19.7, 85.32];
 
   return (
@@ -23,6 +32,8 @@ export default function MapView({ boundary, transects, showTransects, selectedId
           url="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
           attribution='&copy; OpenStreetMap &copy; CARTO'
         />
+        <ScaleControl position="bottomright" imperial={false} />
+        {onCoordsChange && <CoordsTracker onMove={onCoordsChange} />}
         {boundary && <GeoJSON data={boundary} style={boundaryStyle} />}
         {showTransects && transects && transects.features.map((f) => {
           const [lon, lat] = f.geometry.coordinates;
