@@ -472,6 +472,7 @@ p { margin: 0; line-height: 1.6; }
 .tool-tag-link:hover { background: rgba(53, 214, 232, 0.08); }
 .stack-card[href] { cursor: pointer; transition: border-color 0.2s ease; }
 .stack-card[href]:hover { border-color: var(--accent-cyan); }
+<<<<<<< HEAD
 
 /* ---------- KPI header ---------- */
 .kpi-row {
@@ -573,3 +574,5 @@ p { margin: 0; line-height: 1.6; }
   .map-toolbar { flex-direction: column; align-items: flex-start; }
   .toolbar-btn { margin-left: 0; }
 }
+=======
+>>>>>>> 0475554f6f7af24fca3f1c510d8c6ecea70b5405
